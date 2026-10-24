@@ -26,6 +26,7 @@ sub refresh 就等于进菜单后手动选 5，两种方式结果一样，后者
 ```
 curl -sSL https://raw.githubusercontent.com/zhugo1982/csub12/refs/heads/main/cs -o /usr/local/bin/sub && chmod +x /usr/local/bin/sub; sub
 ```
+```
 
 
 
