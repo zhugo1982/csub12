@@ -1,4 +1,5 @@
-最新ds
+最新ds   VPS12协议
+
 ```
 curl -sSL https://raw.githubusercontent.com/zhugo1982/csub12/refs/heads/main/ds -o /usr/local/bin/sub && chmod +x /usr/local/bin/sub; sub
 ```
