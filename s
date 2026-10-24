@@ -24,7 +24,7 @@ TOKEN_FILE="$SUB_DIR/token"
 IP_FILE="$SUB_DIR/ip"
 SUB_PORT=2082
 # 脚本升级地址（改成你自己的 GitHub 原始文件地址）
-SCRIPT_URL="https://raw.githubusercontent.com/zhugo1982/sub-9/refs/heads/main/grok"
+SCRIPT_URL="https://raw.githubusercontent.com/zhugo1982/csub12/refs/heads/main/s"
 
 TCP_PORTS="443 444 8881 3443 10000 7443 6443 6555 5443 4443 $SUB_PORT"
 UDP_PORTS="8443 9443 6443 6555"
