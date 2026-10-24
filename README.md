@@ -3,6 +3,11 @@
 curl -sSL https://raw.githubusercontent.com/zhugo1982/csub12/refs/heads/main/ds -o /usr/local/bin/sub && chmod +x /usr/local/bin/sub; sub
 ```
 
+如果是已经部署过的服务器，要保留现有节点，命令末尾换成 sub refresh
+```
+curl -sSL https://raw.githubusercontent.com/zhugo1982/csub12/refs/heads/main/ds -o /usr/local/bin/sub && chmod +x /usr/local/bin/sub; sub refresh
+```
+
 ```
 curl -sSL https://raw.githubusercontent.com/zhugo1982/csub12/refs/heads/main/cs -o /usr/local/bin/sub && chmod +x /usr/local/bin/sub; sub
 ```
@@ -36,3 +41,30 @@ curl -sSL https://raw.githubusercontent.com/zhugo1982/csub12/refs/heads/main/s -
 改完要在云安全组放行新端口。 系统防火墙脚本能管，云平台的管不了。
 名字不会跟着变。 比如第 3 个节点叫 Hugo-XTLS-Reality-8881，端口改了名字还是 8881，只是个标签，不影响使用。
 选 2（全新部署）会把所有协议端口重置回默认值。
+
+
+
+
+在服务器上输入 sub 后面跟一个词，就能直接执行对应功能，不用先进菜单：
+
+命令	作用	对应菜单
+sub show	查看所有节点和订阅链接	1
+sub refresh	更新订阅、追加新功能，不重置节点	5
+sub status	状态检测，哪里不通先跑它	3
+sub qr	显示订阅二维码	6
+sub bbr	开启 BBR 加速	7
+sub traffic	查看流量统计	8
+sub port	修改某个协议或订阅服务的端口	11
+sub check	只检查有没有新版本，不升级	无
+sub upgrade	检查并升级脚本	10
+
+几个小用法：
+
+sub qr 3 可以直接指定二维码类型：1 是通用订阅，2 是 sing-box 全局，3 是 sing-box 分流，4 是 Clash。
+sub upgrade -y 跳过确认直接升级。
+
+
+sub install：全新部署，会重置所有节点凭证。
+sub uninstall：彻底卸载。
+sub upgrade-core：升级 sing-box 内核（对应菜单 9）。
+sub version：显示脚本版本。
