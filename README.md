@@ -8,6 +8,21 @@ curl -sSL https://raw.githubusercontent.com/zhugo1982/csub12/refs/heads/main/ds 
 curl -sSL https://raw.githubusercontent.com/zhugo1982/csub12/refs/heads/main/ds -o /usr/local/bin/sub && chmod +x /usr/local/bin/sub; sub refresh
 ```
 
+命令前半段是一样的：把新脚本下载到服务器，替换掉旧的 sub。差别只在末尾：
+
+末尾	效果
+; sub	打开菜单，等你自己选
+; sub refresh	不进菜单，直接执行「更新订阅 / 追加新功能」，不重置节点
+
+sub refresh 就等于进菜单后手动选 5，两种方式结果一样，后者只是省了一步。
+
+为什么我建议加 refresh
+
+只替换脚本文件，服务器上的实际配置并不会变。新版本带来的服务端改动，比如 ShadowTLS 节点、禁止访问内网的安全规则、新的订阅服务程序，都要等执行了"更新"才会生效。
+
+如果你只用 ; sub，进了菜单却什么都不选就退出，脚本是新的，服务器上却还是旧配置，新功能用不上。
+
+```
 ```
 curl -sSL https://raw.githubusercontent.com/zhugo1982/csub12/refs/heads/main/cs -o /usr/local/bin/sub && chmod +x /usr/local/bin/sub; sub
 ```
