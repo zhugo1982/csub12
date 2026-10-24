@@ -23,20 +23,15 @@ sub refresh 就等于进菜单后手动选 5，两种方式结果一样，后者
 如果你只用 ; sub，进了菜单却什么都不选就退出，脚本是新的，服务器上却还是旧配置，新功能用不上。
 
 ```
-```
-```
 curl -sSL https://raw.githubusercontent.com/zhugo1982/csub12/refs/heads/main/cs -o /usr/local/bin/sub && chmod +x /usr/local/bin/sub; sub
 ```
-```
-
-
-
-
 
 ```
 curl -sSL https://raw.githubusercontent.com/zhugo1982/csub12/refs/heads/main/s -o /usr/local/bin/sub && chmod +x /usr/local/bin/sub; sub
 ```
+
 如果是已经部署过的服务器，要保留现有节点，命令末尾换成 sub refresh
+
 ```
 curl -sSL https://raw.githubusercontent.com/zhugo1982/csub12/refs/heads/main/s -o /usr/local/bin/sub && chmod +x /usr/local/bin/sub; sub refresh
 ```
